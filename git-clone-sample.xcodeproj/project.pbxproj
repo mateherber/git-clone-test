@@ -14,6 +14,7 @@
 		13A3BDDD1D3917A500A48D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A3BDDB1D3917A500A48D43 /* LaunchScreen.storyboard */; };
 		13A3BDE81D3917A500A48D43 /* git_clone_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3BDE71D3917A500A48D43 /* git_clone_sampleTests.swift */; };
 		13A3BDF31D3917A500A48D43 /* git_clone_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3BDF21D3917A500A48D43 /* git_clone_sampleUITests.swift */; };
+		DB88FF3949D9644305624886 /* Pods_git_clone_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CD14323744FBD59E156CDB /* Pods_git_clone_sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		13A3BDEE1D3917A500A48D43 /* git-clone-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "git-clone-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A3BDF21D3917A500A48D43 /* git_clone_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = git_clone_sampleUITests.swift; sourceTree = "<group>"; };
 		13A3BDF41D3917A500A48D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D743E15226DA936C0DBDF08 /* Pods-git-clone-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git-clone-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-git-clone-sample/Pods-git-clone-sample.release.xcconfig"; sourceTree = "<group>"; };
+		834DDD4732A5748118C0F5C5 /* Pods-git-clone-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-git-clone-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-git-clone-sample/Pods-git-clone-sample.debug.xcconfig"; sourceTree = "<group>"; };
+		F8CD14323744FBD59E156CDB /* Pods_git_clone_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_git_clone_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB88FF3949D9644305624886 /* Pods_git_clone_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				13A3BDE61D3917A500A48D43 /* git-clone-sampleTests */,
 				13A3BDF11D3917A500A48D43 /* git-clone-sampleUITests */,
 				13A3BDD01D3917A500A48D43 /* Products */,
+				EC5D77EA324870D1E39EABC4 /* Pods */,
+				C434C46A86223A55FA77A45A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = "git-clone-sampleUITests";
 			sourceTree = "<group>";
 		};
+		C434C46A86223A55FA77A45A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD14323744FBD59E156CDB /* Pods_git_clone_sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC5D77EA324870D1E39EABC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				834DDD4732A5748118C0F5C5 /* Pods-git-clone-sample.debug.xcconfig */,
+				2D743E15226DA936C0DBDF08 /* Pods-git-clone-sample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13A3BDF71D3917A500A48D43 /* Build configuration list for PBXNativeTarget "git-clone-sample" */;
 			buildPhases = (
+				305DD8846439179CB23806F9 /* 📦 Check Pods Manifest.lock */,
 				13A3BDCB1D3917A500A48D43 /* Sources */,
 				13A3BDCC1D3917A500A48D43 /* Frameworks */,
 				13A3BDCD1D3917A500A48D43 /* Resources */,
+				A4A0B0B1EB4403332F5CACBF /* 📦 Embed Pods Frameworks */,
+				D9F3664C03C9904FE949198D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		305DD8846439179CB23806F9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A0B0B1EB4403332F5CACBF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-git-clone-sample/Pods-git-clone-sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9F3664C03C9904FE949198D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-git-clone-sample/Pods-git-clone-sample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13A3BDCB1D3917A500A48D43 /* Sources */ = {
@@ -399,6 +474,7 @@
 		};
 		13A3BDF81D3917A500A48D43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834DDD4732A5748118C0F5C5 /* Pods-git-clone-sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "git-clone-sample/Info.plist";
@@ -410,6 +486,7 @@
 		};
 		13A3BDF91D3917A500A48D43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D743E15226DA936C0DBDF08 /* Pods-git-clone-sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "git-clone-sample/Info.plist";
@@ -484,6 +561,7 @@
 				13A3BDF91D3917A500A48D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13A3BDFA1D3917A500A48D43 /* Build configuration list for PBXNativeTarget "git-clone-sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				13A3BDFC1D3917A500A48D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13A3BDFD1D3917A500A48D43 /* Build configuration list for PBXNativeTarget "git-clone-sampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				13A3BDFF1D3917A500A48D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
