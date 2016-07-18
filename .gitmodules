@@ -1,3 +1,3 @@
 [submodule "sample-apps-android-sdk22"]
 	path = sample-apps-android-sdk22
-url=git@github.com:bitrise-samples/sample-apps-android-sdk22.git
+url=https://github.com/bitrise-samples/sample-apps-android-sdk22.git
