@@ -1,0 +1,3 @@
+[submodule "git-clone-test"]
+	path = git-clone-test
+	url = git@gitlab.com:bitrise/git-clone-test.git
